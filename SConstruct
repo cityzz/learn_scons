@@ -1,6 +1,7 @@
 
-src_files = Split("""hello.c
-                     file1.c
-                     file2.c""")
-Program(source = src_files, target = 'program')
+common = ['file1.c', 'file2.c']
+foo_files = ['hello.c'] + common
+bar_files = ['program2.c'] + common
+Program('foo', foo_files)
+Program('bar', bar_files)
 
