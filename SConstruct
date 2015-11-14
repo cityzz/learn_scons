@@ -1,3 +1,3 @@
 
-Program('new_hello', 'hello.c')
+Program('program', ['hello.c', 'file1.c', 'file2.c'])
 
