@@ -1,6 +1,6 @@
 
-common_sources = ['file1.c', 'file2.c']
-
-Program('program1', common_sources + ['hello.c'])
-Program('program2', common_sources + ['program2.c'])
+src_files = Split("""hello.c
+                     file1.c
+                     file2.c""")
+Program('program', src_files)
 
