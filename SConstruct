@@ -1,3 +1,3 @@
 
-Program('hello.c')
+Program('new_hello', 'hello.c')
 
