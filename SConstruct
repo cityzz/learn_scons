@@ -1,5 +1,7 @@
 
-file_list = Object(['file1.c', 'file2.c'])
-program2_list = Object('program2.c')
-Program(program2_list + file_list) 
+object_list = Object('prog.c', LIBS = 'm',
+                             LIBPATH = ['/usr/lib', '/usr/local/lib'])
+program_list = Program(object_list)
+print "The object file is:", object_list[0]
+print "The program file is:", program_list[0]
 
