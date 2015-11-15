@@ -1,5 +1,7 @@
 
-env=Environment(VAR="value")
-n=File("foo.c")
-print env.GetBuildPath([n, "sub/dir/$VAR"])
+env = Environment(CC = 'gcc',
+                  CCFLAGS = '-O2')
+
+env.Program('prog.c', LIBS = 'm',
+                      LIBPATH = ['/usr/lib', '/usr/local/lib'])
 
